@@ -66,13 +66,7 @@ let Main argv =
     if buildResults
     then
         directoryCopy inputFolder outputPath true
-        // Directory.EnumerateFiles(inputFolder, "*", SearchOption.AllDirectories)
-        // |> Seq.iter (fun i -> 
-        //        let relativePath = i.Substring(inputFolder.Length)
-        //        let fn = Path.GetFileName i
-        //        let outputPath = outputPath /> relativePath
-        //        let output = outputPath /> fn
-        //        File.Copy(i, output, true))
+        JsCompiler.extractFramework outputPath
         if afterBuild <> ""
         then
             Process.Start(Environment.CurrentDirectory /> afterBuild) |> ignore
