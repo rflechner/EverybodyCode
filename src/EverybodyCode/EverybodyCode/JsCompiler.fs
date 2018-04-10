@@ -463,9 +463,10 @@ module JsCompiler
 
   let extractFramework outputPath =
     let asm = Assembly.GetExecutingAssembly()
-    let name = "limpid_framework.js"
+    let name = "framework.js"
     use stream = asm.GetManifestResourceStream name
-    use file = File.OpenWrite (Path.Combine(outputPath, "limpid_framework.js"))
+    let fn = Path.Combine(outputPath, "framework.js")
+    use file = File.OpenWrite fn
     stream.CopyTo file
     stream.Flush()
     file.Flush()

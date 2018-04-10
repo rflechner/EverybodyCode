@@ -13,6 +13,9 @@
     <Compile Include="SourceMapper.fs" />
     <Compile Include="Compiler.fs" />
     <Compile Include="Program.fs" />
+    <EmbeddedResource Include="framework.js">
+      <LogicalName>framework.js</LogicalName>
+    </EmbeddedResource>
     <None Include="*.fsx" />
   </ItemGroup>
   <ItemGroup>
