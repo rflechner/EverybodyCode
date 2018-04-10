@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>EverybodyCode</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net461</TargetFrameworks>
+    <Platform>x64</Platform>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PositionTacking.fs" />
+    <Compile Include="AST.fs" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="JsCompiler.fs" />
+    <Compile Include="SourceMapper.fs" />
+    <Compile Include="Compiler.fs" />
+    <Compile Include="Program.fs" />
+    <None Include="*.fsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FParsec" Version="1.0.4-RC" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0*" />
+    <PackageReference Include="Edge.js" Version="8.2.1" />
+    <PackageReference Include="Argu" Version="5.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\packages\edge.js\8.2.1\content\edge\x64\node.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\packages\edge.js\8.2.1\content\edge\x64\edge_nativeclr.node">
+      <Link>edge\x64/%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\packages\edge.js\8.2.1\content\edge\*.js">
+      <Link>edge/%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+</Project>
