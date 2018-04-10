@@ -1,0 +1,24 @@
+
+declare count = 0
+declare colors = [ "red", "green", "blue", "purple" ]
+console.log(colors)
+
+function Coucou ()
+  
+  if count < 4 then
+    set count = count + 1
+  else
+    set count = 0
+  end
+
+  console.log("coucou number " + count)
+  jQuery("#message").html("coucou number " + count + " ça marche !")
+  $("body").css("background-color", colors[count])
+end
+
+declare payButton = document.getElementById ("payButton")
+
+console.log(payButton)
+
+payButton.onclick = Coucou
+

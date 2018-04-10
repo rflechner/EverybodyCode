@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "transpile sample 2",
+            "command": "src/EverybodyCode/EverybodyCode/bin/x64/Debug/net461/EverybodyCode.exe",
+            "args": [
+                "--inputfolder", "samples/sample2",
+                "--outputfolder", "samples/sample2_build"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "transpile sample 1",
+            "command": "src/EverybodyCode/EverybodyCode/bin/x64/Debug/net461/EverybodyCode.exe",
+            "args": [
+                "--inputfolder", "samples/sample1",
+                "--outputfolder", "samples/sample1_build",
+                "--afterbuild", "samples/sample1_build/index.html"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build compiler",
+            "command": "dotnet build src/EverybodyCode/EverybodyCode/EverybodyCode.fsproj",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "transpile sample 1 mac os",
+            "command": "mono",
+            "args": [
+                "src/EverybodyCode/EverybodyCode/bin/x64/Debug/net461/EverybodyCode.exe",
+                "--inputfolder", "samples/sample1",
+                "--outputfolder", "samples/sample1_build",
+                "--afterbuild", "samples/sample1_build/index.html"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "transpile sample 2 macosx",
+            "command": "mono",
+            "args": [
+                "src/EverybodyCode/EverybodyCode/bin/x64/Debug/net461/EverybodyCode.exe",
+                "--inputfolder", "samples/sample2",
+                "--outputfolder", "samples/sample2_build"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

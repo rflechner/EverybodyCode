@@ -21,6 +21,7 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+BuildFolder/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -215,3 +216,5 @@ FakesAssemblies/
 **/*.Server/GeneratedArtifacts
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
+
+src/EverybodyCode/EverybodyCode/build_js/

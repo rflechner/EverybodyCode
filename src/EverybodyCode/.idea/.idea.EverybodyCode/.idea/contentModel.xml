@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="EverybodyCode" t="IncludeRecursive">
+        <e p="AST.fs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Compile.fsx" t="Include" />
+        <e p="Compiler.fs" t="Include" />
+        <e p="edge" t="Include">
+          <e p="x64" t="Include" />
+        </e>
+        <e p="EverybodyCode.fsproj" t="IncludeRecursive" />
+        <e p="game1" t="Include">
+          <e p="assets" t="Include">
+            <e p="blue.png" t="Include" />
+            <e p="fsharp256.png" t="Include" />
+            <e p="phaser3-logo.png" t="Include" />
+            <e p="red.png" t="Include" />
+            <e p="space3.png" t="Include" />
+            <e p="tour_eiffel.jpg" t="Include" />
+          </e>
+          <e p="framework.js" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="source1.code" t="Include" />
+        </e>
+        <e p="JsCompiler.fs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Parse.fsx" t="Include" />
+        <e p="Parse_and_compile.fsx" t="Include" />
+        <e p="Parser.fs" t="Include" />
+        <e p="PositionTacking.fs" t="Include" />
+        <e p="Program.fs" t="Include" />
+        <e p="sample" t="Include">
+          <e p="framework.js" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="source1.code" t="Include" />
+        </e>
+        <e p="SourceMapper.fs" t="Include" />
+      </e>
+      <e p="EverybodyCode.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive">
+        <e p="edge.js/8.2.1/content/edge/double_edge.js" t="Include" />
+        <e p="edge.js/8.2.1/content/edge/edge.js" t="Include" />
+        <e p="edge.js/8.2.1/content/edge/x64/edge_nativeclr.node" t="Include" />
+        <e p="edge.js/8.2.1/content/edge/x64/node.dll" t="Include" />
+        <e p="xunit.runner.visualstudio/2.3.1/build/_common/xunit.abstractions.dll" t="Include" />
+        <e p="xunit.runner.visualstudio/2.3.1/build/_common/xunit.runner.reporters.net452.dll" t="Include" />
+        <e p="xunit.runner.visualstudio/2.3.1/build/_common/xunit.runner.utility.net452.dll" t="Include" />
+        <e p="xunit.runner.visualstudio/2.3.1/build/_common/xunit.runner.visualstudio.testadapter.dll" t="Include" />
+      </e>
+      <e p="tests/EverybodyCode.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="EverybodyCode.Tests.fsproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Tests.fs" t="Include" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_EverybodyCode.-549711864.00" t="ExcludeRecursive" />
+  </component>
+</project>

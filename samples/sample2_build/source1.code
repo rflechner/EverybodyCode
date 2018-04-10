@@ -1,0 +1,48 @@
+
+type Point(int x; int y)
+type ArcadeConfig(Point! gravity)
+type PhysicsConf(string default; ArcadeConfig! arcade)
+type Scene (func! preload; func! create)
+type Config (any! type; int! width; int! height; PhysicsConf! physics; Scene! scene)
+@external type Phaser.Game(Config config)
+
+function preload ()
+  this.load.setBaseURL("./assets")
+  this.load.image("sky", "space3.png")
+  this.load.image("eiffel", "tour_eiffel.jpg")
+
+  this.load.image("logo", "fsharp256.png")
+  this.load.image("red", "red.png")
+  this.load.image("blue", "blue.png")
+end
+
+type Scale(int start; int end)
+type ParticlesConfig(int speed; Scale scale; string blendMode)
+
+function create()
+  this.add.image(400, 300, "eiffel")
+
+  declare scale = new Scale(1,0)
+  declare particlesConfig = new ParticlesConfig(100, scale, "ADD")
+
+  declare particles = this.add.particles("blue")
+  declare emitter = particles.createEmitter(particlesConfig)
+  declare logo = this.physics.add.image(400, 100, "logo")
+
+  logo.setVelocity(100, 200)
+  logo.setBounce(1, 1)
+  logo.setCollideWorldBounds(true)
+
+  emitter.startFollow(logo)
+
+end
+
+declare scene = new Scene (preload, create)
+declare arcade = new ArcadeConfig(new Point(0,200))
+declare physics = new PhysicsConf(arcade)
+physics.default = "arcade"
+
+declare config = new Config(Phaser.AUTO, 800, 600, physics, scene)
+declare game = new Phaser.Game(config)
+
+set a = { 12, 84; "key1", 54 }
